@@ -1,0 +1,316 @@
+/* =======================
+   VARIABLES / COLORS
+======================= */
+:root {
+    --main-pink: #ffe2e5;        /* pastel pink for header gradient */
+    --main-green: #dff8e4;       /* pastel green for header gradient */
+    --card-green: #e7f9e9;       /* warm light green for cards */
+    --bg-main: #fff3f5;          /* soft pink page background */
+    --text-main: #2f2f2f;        /* main text color */
+    --heading-color: #d9828a;    /* slightly darker pink for headings */
+    --secondary-color: #66b078;  /* green accent for headings/buttons */
+  }
+  
+  /* =======================
+     BODY BASE
+  ======================= */
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+  }
+  
+  /* =======================
+     NAVIGATION
+  ======================= */
+  .navbar {
+    background-color: rgba(255,255,255,0.95); /* slightly transparent */
+    backdrop-filter: blur(6px);              /* blur for glass effect */
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;                        /* sticks at top */
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  /* animate navbar on scroll */
+  .navbar.scrolled {
+    background-color: rgba(255,255,255,1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  }
+  
+  .nav-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Logo in navbar */
+  .navbar .logo img {
+    max-height: 40px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: var(--secondary-color);
+  }
+  
+  /* =======================
+     HERO HEADER
+  ======================= */
+  .parallax-header {
+    background: linear-gradient(120deg, var(--main-pink) 0%, var(--main-green) 100%);
+    background-attachment: fixed;           /* enables parallax effect */
+    background-position: center;
+    background-size: cover;
+    padding: 4rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+  }
+  
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .header-text {
+    max-width: 600px;
+  }
+  
+  .tagline {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+  }
+  
+  .subtext {
+    font-size: 1.1rem;
+    color: #4a4a4a;
+  }
+  
+  /* Circular logo on right in header */
+  .header-logo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.6); /* soft border */
+  }
+  
+  /* =======================
+     MAIN CONTAINER
+  ======================= */
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 3rem 1.5rem;
+  }
+  
+  /* =======================
+     SECTIONS
+  ======================= */
+  section {
+    margin-bottom: 4rem;
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+  }
+  
+  /* =======================
+     ABOUT SECTION
+  ======================= */
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .profile-pic img {
+    height: 340px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 55%; /* rounded profile */
+    border: 4px solid #dff8e4; /* pastel green border */
+    box-shadow: 0 8px 25px rgba(194, 233, 191, 0.6); /* darker green shadow */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-pic img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* =======================
+     CARDS (SPECIALISM & SUPPORT)
+  ======================= */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .card {
+    background: var(--card-green);
+    padding: 1.75rem;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    opacity: 0;                  /* for animation */
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+/* =========================
+   TESTIMONIALS (CLEAN FADE)
+========================= */
+
+.testimonial-slider {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .testimonial {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    font-style: italic;
+    opacity: 1;
+    transition: opacity 1.2s ease-in-out;
+  }
+  
+  .testimonial.fade-out {
+    opacity: 0;
+  }
+  
+  /* Mobile: show 1 testimonial */
+  @media (max-width: 768px) {
+    .testimonial-slider {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  
+  
+  
+  /* =======================
+     CONTACT FORM
+  ======================= */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 1.5rem auto 0;
+  }
+  
+  .contact-form label {
+    font-weight: 500;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .contact-form button {
+    padding: 0.9rem 1.5rem;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #4f9160;
+  }
+  
+  /* =======================
+     FOOTER
+  ======================= */
+  footer {
+    background-color: var(--main-green);
+    color: #2f2f2f;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* =======================
+     RESPONSIVE
+  ======================= */
+  @media (max-width: 768px) {
+    .about {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .profile-pic img {
+      margin: auto;
+    }
+  
+    .header-inner {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .header-logo img {
+      margin-top: 2rem;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  

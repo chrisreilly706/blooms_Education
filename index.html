@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloom Education Support | Jacqueline Pickles</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="images/logo.png" alt="Bloom Logo in Nav"> 
+      <span>Bloom Education Support</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#offer">Services</a></li>
+      <li><a href="#specialism">Specialism</a></li>
+      <li><a href="#support">Support Packages</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO HEADER -->
+<header class="parallax-header">
+  <div class="header-inner">
+    <div class="header-text">
+      <p class="tagline">Specialist Communication and SEND support for every learner.</p>
+      <p class="subtext">Helping schools and families create inclusive environments where all children can communicate, achieve and thrive.</p>
+    </div>
+    <div class="header-logo">
+      <img src="images/logo.png" alt="Bloom Education Support Logo">
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about">
+    <div class="profile-pic">
+      <img src="images/profile.jpg" alt="Jacqueline Pickles profile photo">
+    </div>
+    <div>
+      <p>I have 27 years teaching experience in education, with 25 years spent at Outstanding Specialist schools in Lancashire. I am a passionate and highly skilled specialist teacher focusing on communication and SEND.</p>
+      <p>I have worked across EYFS, Primary and Secondary key stages, supporting a diverse range of needs and ensuring every pupil receives the right support to succeed.</p>
+      <p>I have previously served as a SENCO, but my greatest achievements have come from my role as a Communication Specialist. I have worked closely with Speech and Language Therapy teams to introduce targeted interventions and to create inclusive total communication environments.</p>
+      <p>My approach is warm, practical and child-centred, built on the belief that communication is the key to enabling every learner to grow and flourish.</p>
+      <p>I am committed to offering personalised support to schools, pupils and their families, removing barriers to learning and empowering every young person to achieve their full potential.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="offer">
+  <h2>Through Bloom Education Support, I Offer</h2>
+  <ul>
+    <li>Tailored SEND and communication support</li>
+    <li>Autism specialist guidance including TEACCH</li>
+    <li>Environment and resource audits</li>
+    <li>1-1 social stories and behaviour support strategies</li>
+    <li>Specialist advice reports to support EHCPs</li>
+    <li>SMART target setting in liaison with school staff</li>
+    <li>Attendance at annual review meetings</li>
+    <li>Intervention setup and progress support</li>
+    <li>Personalised individual and small group interventions</li>
+    <li>Parental guidance and support</li>
+  </ul>
+</section>
+
+<!-- SPECIALISM -->
+<section id="specialism">
+  <h2>Areas of Specialism</h2>
+  <div class="cards">
+    <div class="card">Autism and complex communication needs</div>
+    <div class="card">Total communication approaches (symbols, signing, PECS, AAC)</div>
+    <div class="card">Moderation and assessment for SEND learners</div>
+    <div class="card">Sensory profiles</div>
+    <div class="card">Behaviour as communication</div>
+    <div class="card">Communication friendly environments</div>
+  </div>
+</section>
+
+<!-- SUPPORT -->
+<section id="support">
+  <h2>Support Available</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Package One</h3>
+      <p><strong>Pupil observation and verbal feedback</strong></p>
+      <p>Approx. 90 minutes in school</p>
+      <p><strong>£125</strong></p>
+    </div>
+    <div class="card">
+      <h3>Package Two</h3>
+      <p><strong>Pupil observation with written report</strong></p>
+      <p>Report provided same day</p>
+      <p><strong>£200</strong></p>
+    </div>
+    <div class="card">
+      <h3>Package Three</h3>
+      <p><strong>Half-day in school</strong></p>
+      <p>Observations, SENCO collaboration, action planning</p>
+      <p><strong>£280</strong></p>
+    </div>
+    <div class="card">
+      <h3>Package Four</h3>
+      <p><strong>Hourly interventions</strong></p>
+      <p>Individual or small group support</p>
+      <p><strong>£75 per hour</strong></p>
+    </div>
+    <div class="card">
+      <h3>Package Five</h3>
+      <p><strong>Specialist environment & timetable design</strong></p>
+      <p><em>Tailored to establishment needs</em></p>
+    </div>
+  </div>
+</section>
+
+
+<section id="testimonials" class="testimonials">
+    <h2>Testimonials</h2>
+  
+    <div class="testimonial-slider">
+      <div class="testimonial fade" id="testimonial-1"></div>
+      <div class="testimonial fade" id="testimonial-2"></div>
+    </div>
+  </section>
+  
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form class="contact-form" action="https://formspree.io/f/xjknzeke" method="POST">
+    <label>Name</label>
+    <input type="text" name="name" required>
+    <label>Email</label>
+    <input type="email" name="email" required>
+    <label>Message</label>
+    <textarea name="message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+</div>
+
+<footer>
+  <p>© 2025 Bloom Education Support | Jacqueline Pickles</p>
+</footer>
+
+<!-- SCRIPT FOR CARD ANIMATION AND TESTIMONIAL SLIDER -->
+<script>
+  // Animate cards on scroll
+  const cards = document.querySelectorAll('.card');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  cards.forEach(card => observer.observe(card));
+
+const testimonialsData = [
+  "Jacqueline successfully led our whole school approach to communication. She was highly skilled in supporting pupils with Autism and sensory processing difficulties.",
+  "Jacqueline has supported staff and individual pupils with SEND, sharing her knowledge and best practice effectively.",
+  "Jacqueline consistently demonstrated commitment, enthusiasm and a deep passion for the education of pupils with special educational needs.",
+  "Her quality first teaching was a strong factor in improving outcomes for our pupils.",
+  "Based on her skills, dedication and professional conduct, I would recommend Jacqueline Pickles as a SEND Specialist teacher.",
+  "Developing pupils’ communication is a fundamental part of the school’s curriculum. — Ofsted 2025"
+];
+
+let index = 0;
+const intervalTime = 10000;
+
+const t1 = document.getElementById("testimonial-1");
+const t2 = document.getElementById("testimonial-2");
+
+function updateTestimonials() {
+  // Fade out
+  t1.classList.add("fade-out");
+  t2.classList.add("fade-out");
+
+  setTimeout(() => {
+    t1.textContent = `“${testimonialsData[index % testimonialsData.length]}”`;
+    t2.textContent = `“${testimonialsData[(index + 1) % testimonialsData.length]}”`;
+
+    t1.classList.remove("fade-out");
+    t2.classList.remove("fade-out");
+
+    index += 2;
+  }, 1200);
+}
+
+// Initial load
+updateTestimonials();
+
+// Rotate every 6 seconds
+setInterval(updateTestimonials, intervalTime);
+
+
+
+  // Parallax effect
+  const header = document.querySelector('.parallax-header');
+  window.addEventListener('scroll', () => {
+    let offset = window.scrollY;
+    header.style.backgroundPositionY = offset * 0.5 + "px";
+  });
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
