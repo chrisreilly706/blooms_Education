@@ -352,5 +352,68 @@
     box-shadow: 0 6px 14px rgba(120, 180, 140, 0.35);
   }
 }
+/* ================================
+   MOBILE COMPACTING & LAYOUT FIX
+   ================================ */
+@media (max-width: 768px) {
+
+  body {
+    line-height: 1.55; /* tighten text */
+  }
+
+  /* Reduce section padding */
+  section {
+    padding: 1.5rem 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Limit text width for readability */
+  section p,
+  section li {
+    max-width: 36ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+
+  /* Reduce card spacing */
+  .cards {
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  /* About section tighter */
+  .about {
+    gap: 1.25rem;
+  }
+
+  .profile-pic img {
+    height: 260px;
+  }
+
+  /* Testimonials tighter */
+  .testimonials blockquote {
+    margin: 1rem 0;
+    padding: 1.25rem;
+  }
+
+  /* Contact form tighter */
+  .contact-form {
+    gap: 0.75rem;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+}
+
 
   
+
