@@ -114,13 +114,13 @@ header {
 
 .tagline {
   font-size: 1.9rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 0.75rem;
 }
 
 .credentials {
   font-size: 1.45rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 1rem;
   letter-spacing: 0.3px;
 }
@@ -328,6 +328,7 @@ h2 {
     gap: 1rem;
   }
 }
+
 
 
 
